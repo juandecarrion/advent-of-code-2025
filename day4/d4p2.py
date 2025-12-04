@@ -30,6 +30,7 @@ new_grid = copy.deepcopy(old_grid)
 first = True
 p2_counter = 0
 while old_grid != new_grid or first == True:
+    old_grid = copy.deepcopy(new_grid)
     first = False
     for i in range(height):
         for j in range(width):
@@ -58,7 +59,6 @@ while old_grid != new_grid or first == True:
                 if tp_around < 4:
                     p2_counter += 1
                     new_grid[i][j] = '.'
-    old_grid = copy.deepcopy(new_grid)
 
 
 p1_counter = 0
